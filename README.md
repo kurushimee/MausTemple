@@ -1,2 +1,2 @@
 # MausTemple
-A 2D platformer game for PGD Jam 12
+I started working a day before the deadline lmao
