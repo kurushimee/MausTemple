@@ -265,6 +265,7 @@ namespace MausTemple
                 force.y -= _rb.velocity.y;
             }
 
+            Debug.Log(force);
             _rb.AddForce(force, ForceMode2D.Impulse);
         }
         #endregion
