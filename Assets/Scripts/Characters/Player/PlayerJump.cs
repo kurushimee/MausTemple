@@ -19,6 +19,7 @@ namespace MausTemple
         private bool _isJumping;
         private bool _isJumpCut;
         private bool _isJumpFalling;
+        private bool _isFastFalling;
 
         private void Start()
         {
@@ -58,10 +59,15 @@ namespace MausTemple
             #endregion
 
             #region Gravity
-            if (_isJumpCut)
+            if (_rb.velocity.y < 0 && _isFastFalling)
+            {
+                _rb.gravityScale = _data.gravityScale * _data.fastFallGravityMult;
+                _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Max(_rb.velocity.y, -_data.maxFastFallSpeed));
+            }
+            else if (_isJumpCut)
             {
                 _rb.gravityScale = _data.gravityScale * _data.jumpCutGravityMult;
-                _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Max(_rb.velocity.y, -_data.maxFastFallSpeed));
+                _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Max(_rb.velocity.y, -_data.maxFallSpeed));
             }
             else if (_isJumping || _isJumpFalling && Mathf.Abs(_rb.velocity.y) < _data.jumpHangTimeThreshold)
             {
@@ -93,10 +99,13 @@ namespace MausTemple
             _rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         }
 
+        #region Check Methods
         private bool CanJump() => _lastOnGroundTime > 0 && !_isJumping;
 
         private bool CanJumpCut() => _isJumping && _rb.velocity.y > 0;
+        #endregion
 
+        #region Event Handlers
         public void OnJump(InputAction.CallbackContext context)
         {
             if (context.started)
@@ -108,5 +117,12 @@ namespace MausTemple
                 _isJumpCut = true;
             }
         }
+
+        public void OnDrop(InputAction.CallbackContext context)
+        {
+            if (context.performed) return;
+            _isFastFalling = context.started;
+        }
+        #endregion
     }
 }
