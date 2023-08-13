@@ -1,3 +1,4 @@
+// Inspired by https://github.com/DawnosaurDev/platformer-movement/blob/e640b3498621cfe2f5e4a28e7c31f4d91610b6c7/Platformer%20Demo%20-%20Unity%20Project/Assets/Scripts/PlayerData.cs
 using UnityEngine;
 
 namespace MausTemple
