@@ -5,7 +5,7 @@ namespace MausTemple
 {
     public class Jump : MonoBehaviour
     {
-        [SerializeField] private float _jumpForce;
+        [SerializeField] private PlayerData _data;
 
         private Rigidbody2D _rb;
         private int _groundLayer;
@@ -13,6 +13,7 @@ namespace MausTemple
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _rb.gravityScale = _data.gravityScale;
             _groundLayer = LayerMask.GetMask("Ground");
         }
 
@@ -20,11 +21,12 @@ namespace MausTemple
         {
             if (_rb.velocity.y < 0)
             {
-
+                _rb.gravityScale = _data.gravityScale * _data.fallGravityMult;
+                _rb.velocity = new Vector2(_rb.velocity.x, Mathf.Max(_rb.velocity.y, -_data.maxFallSpeed));
             }
             else
             {
-
+                _rb.gravityScale = _data.gravityScale;
             }
         }
 
@@ -44,9 +46,10 @@ namespace MausTemple
         public void OnJump(InputAction.CallbackContext context)
         {
             if (!IsGrounded()) return;
-            if (!context.performed) return;
-
-            _rb.velocity += Vector2.up * _jumpForce;
+            if (context.started)
+            {
+                _rb.velocity += Vector2.up * _data.jumpForce;
+            }
         }
     }
 }
