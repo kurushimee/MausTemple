@@ -16,6 +16,18 @@ namespace MausTemple
             _groundLayer = LayerMask.GetMask("Ground");
         }
 
+        private void Update()
+        {
+            if (_rb.velocity.y < 0)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
         private bool IsGrounded()
         {
             var distanceToGround = 0.6f;
