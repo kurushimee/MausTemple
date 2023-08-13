@@ -10,6 +10,8 @@ namespace MausTemple
 
         #region Components
         private Rigidbody2D _rb;
+        [SerializeField] private AudioSource _speedAudioSource;
+        [SerializeField] private AudioSource _movementAudioSource;
         #endregion
 
         #region State Parameters
@@ -168,6 +170,11 @@ namespace MausTemple
                 _rb.gravityScale = _data.gravityScale;
             }
             #endregion
+
+            #region Audio
+            var maxSpeedVolume = 0.05f;
+            _speedAudioSource.volume = maxSpeedVolume * (_rb.velocity.sqrMagnitude / (_data.maxFastFallSpeed * _data.maxFallSpeed));
+            #endregion
         }
 
         private void FixedUpdate()
@@ -226,6 +233,7 @@ namespace MausTemple
 
             // Convert this to a vector and apply to rigidbody
             _rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
+
         }
 
         private void Jump()
@@ -240,6 +248,8 @@ namespace MausTemple
             }
 
             _rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+
+            _movementAudioSource.PlayOneShot(_data.jumpSound);
         }
 
         private void WallJump(int direction)
@@ -266,6 +276,8 @@ namespace MausTemple
             }
 
             _rb.AddForce(force, ForceMode2D.Impulse);
+
+            _movementAudioSource.PlayOneShot(_data.wallJumpSound);
         }
         #endregion
 

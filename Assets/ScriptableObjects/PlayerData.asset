@@ -40,3 +40,6 @@ MonoBehaviour:
   doTurnOnWallJump: 0
   coyoteTime: 0.1
   jumpInputBufferTime: 0.1
+  jumpSound: {fileID: 8300000, guid: 7bf4d44d4c25d834dbc9e4215f131da8, type: 3}
+  wallJumpSound: {fileID: 8300000, guid: 8245025a9323e004fa68781052dbf447, type: 3}
+  landSound: {fileID: 0}
