@@ -48,7 +48,13 @@ namespace MausTemple
             if (!IsGrounded()) return;
             if (context.started)
             {
-                _rb.velocity += Vector2.up * _data.jumpForce;
+                var force = _data.jumpForce;
+                if (_rb.velocity.y < 0)
+                {
+                    force -= _rb.velocity.y;
+                }
+
+                _rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
             }
         }
     }
