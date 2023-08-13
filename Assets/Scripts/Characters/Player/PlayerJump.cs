@@ -124,5 +124,13 @@ namespace MausTemple
             _isFastFalling = context.started;
         }
         #endregion
+
+        #region EDITOR METHODS
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
+        }
+        #endregion
     }
 }
