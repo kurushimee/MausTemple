@@ -18,6 +18,7 @@ A simple 2D platformer for PGD Jam 12 by Ivan "iver" Ermakov. Your goal is to co
 - **WASD** or **Arrow Keys**: *movement*
 - **Space**: *jump*
 - **Left Mouse Button**: *interact*
+- **Escape**: *exit game*
 
 <a name="tips"></a>
 ## Tips
