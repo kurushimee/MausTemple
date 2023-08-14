@@ -230,4 +230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _highlight: {fileID: 1708837858766040603}
   _collectSound: {fileID: 8300000, guid: a3cf26e1206c90d4f88da5bcbe41111b, type: 3}
+  _interactDistance: 10
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 72
   _channel: {fileID: 11400000, guid: 38094d059015d214bb5c3604e6e9f652, type: 2}

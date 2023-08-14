@@ -6,6 +6,8 @@ namespace MausTemple
     {
         [SerializeField] private GameObject _highlight;
         [SerializeField] private AudioClip _collectSound;
+        [Space(5)]
+        [SerializeField] private float _interactDistance;
 
         [Header("Broadcasting on")]
         [SerializeField] private VoidEventChannelSO _channel = default;
@@ -21,8 +23,18 @@ namespace MausTemple
 
         private void LateUpdate()
         {
-            var interactDistance = 5f;
-            _canClick = Vector3.Distance(transform.position, _playerTransform.position) <= interactDistance;
+            var directionToPlayer = (_playerTransform.position - transform.position).normalized;
+            var hit = Physics2D.Raycast(transform.position, directionToPlayer, _interactDistance);
+
+            if (hit)
+            {
+                _canClick = hit.collider.CompareTag("Player");
+            }
+            else
+            {
+                _canClick = false;
+            }
+
             _highlight.SetActive(_canClick && _mouseHover);
         }
 
@@ -50,5 +62,7 @@ namespace MausTemple
                 Destroy(gameObject);
             }
         }
+
+
     }
 }

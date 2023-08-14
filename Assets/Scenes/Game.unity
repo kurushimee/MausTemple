@@ -431,6 +431,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (3)
@@ -2184,6 +2192,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (5)
@@ -2760,6 +2776,14 @@ PrefabInstance:
     - target: {fileID: 29206679700205189, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
@@ -3728,6 +3752,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (4)
@@ -3914,6 +3946,14 @@ PrefabInstance:
     - target: {fileID: 29206679700205189, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
@@ -5142,6 +5182,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (1)
@@ -5718,6 +5766,14 @@ PrefabInstance:
     - target: {fileID: 29206679700205189, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
@@ -6689,6 +6745,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (7)
@@ -7526,6 +7590,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
       value: TreasureChest (2)
@@ -8362,6 +8434,14 @@ PrefabInstance:
     - target: {fileID: 29206679700205189, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _interactDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505580770691437816, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7974914881793070071, guid: e4c74ce21fc7eed4abf764bb4508a41d, type: 3}
       propertyPath: m_Name
