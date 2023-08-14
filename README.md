@@ -21,11 +21,11 @@ A simple 2D platformer for PGD Jam 12 by Ivan "iver" Ermakov. Your goal is to co
 
 <a name="tips"></a>
 ## Tips
-- Hold **S** **Down Arrow Key** to fall faster
+- Hold **S** or **Down Arrow Key** to fall faster
 - Jump near a wall to wall jump in the opposite direction
 - Hold **Space** to control the height of your jump/wall jump
 - A treasure chest is highlighted when you hover your cursor over it
-- Interact on a treasure chest to collect it
+- Interact with a treasure chest to collect it
 
 <h4 align="center">
 <a href="https://iver00.itch.io/maus-temple">Game page on itch.io</a>
