@@ -10,20 +10,18 @@ namespace MausTemple
         [Header("Broadcasting on")]
         [SerializeField] private VoidEventChannelSO _channel = default;
 
-        private AudioSource _audioSource;
         private Transform _playerTransform;
         private bool _canClick;
         private bool _mouseHover;
 
         private void Start()
         {
-            _audioSource = GetComponent<AudioSource>();
             _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         private void LateUpdate()
         {
-            var interactDistance = 10f;
+            var interactDistance = 5f;
             _canClick = Vector3.Distance(transform.position, _playerTransform.position) <= interactDistance;
             _highlight.SetActive(_canClick && _mouseHover);
         }

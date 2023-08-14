@@ -75,6 +75,7 @@ namespace MausTemple
         {
             if (_waitingForRestart && context.canceled)
             {
+                Time.timeScale = 1f;
                 SceneManager.LoadScene(1);
             }
         }
