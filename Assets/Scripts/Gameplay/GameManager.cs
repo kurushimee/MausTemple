@@ -9,6 +9,7 @@ namespace MausTemple
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private TMP_Text _timerText;
+        [SerializeField] private GameObject _continueText;
 
         private float _timer;
         private int _chestsCollected;
@@ -46,23 +47,28 @@ namespace MausTemple
             _timerText.text = $"{minf}:{secf}:{msf}";
         }
 
+        private void EndGame()
+        {
+            Time.timeScale = 0f;
+
+            if (_timer > PlayerPrefs.GetFloat("HighscoreTime"))
+            {
+                PlayerPrefs.SetFloat("HighscoreTime", _timer);
+                PlayerPrefs.SetString("HighscoreText", _timerText.text);
+
+                _timerText.text += "\nnew highscore!";
+            }
+
+            _continueText.SetActive(true);
+            _waitingForRestart = true;
+        }
+
         public void OnCollect()
         {
             var mouseClicks = 10;
             if (++_chestsCollected == mouseClicks)
             {
-                Time.timeScale = 0f;
-
-                if (_timer > PlayerPrefs.GetFloat("HighscoreTime"))
-                {
-                    PlayerPrefs.SetFloat("HighscoreTime", _timer);
-                    PlayerPrefs.SetString("HighscoreText", _timerText.text);
-
-                    _timerText.text += "\nnew highscore!";
-                }
-
-                _timerText.text += "\n\npress any key to restart";
-                _waitingForRestart = true;
+                EndGame();
             }
         }
 

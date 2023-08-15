@@ -233,7 +233,6 @@ namespace MausTemple
 
             // Convert this to a vector and apply to rigidbody
             _rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
-
         }
 
         private void Jump()
