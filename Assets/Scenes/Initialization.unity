@@ -194,7 +194,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.7294118, g: 0.9019608, b: 0.8352941, a: 0}
+  m_BackGroundColor: {r: 0.105882354, g: 0.11764706, b: 0.050980393, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -10}
+  m_LocalPosition: {x: 0, y: 1.125, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_PixelSnapping: 0
   m_CropFrameX: 0
   m_CropFrameY: 0
-  m_StretchFill: 1
+  m_StretchFill: 0
 --- !u!1 &582168480
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6752c64dcfdcc9544904fc24e0b946e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerText: {fileID: 822511929}
+  timerText: {fileID: 822511929}
+  continueText: {fileID: 1619391600}
+  playerInput: {fileID: 2135479625}
 --- !u!114 &793006062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,8 +637,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292208314
+  m_fontColor: {r: 0.7294118, g: 0.9019608, b: 0.8352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -847,7 +849,7 @@ Transform:
   m_GameObject: {fileID: 1186616519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -10}
+  m_LocalPosition: {x: 0, y: 1.125, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -935,7 +937,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.7294118, g: 0.9019608, b: 0.8352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1007,6 +1009,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2157367761945321430, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
   m_PrefabInstance: {fileID: 4061911861189365370}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135479625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
+  m_PrefabInstance: {fileID: 4061911861189365370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4061911861189365370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1021,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2157367761945321430, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2.625
       objectReference: {fileID: 0}
     - target: {fileID: 2157367761945321430, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1064,36 +1077,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
-      value: bdba1c71-9e66-4209-81a8-982664d1be42
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
-      value: d2ed6995-11cc-434a-957c-7cf7ac867440
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
-      value: Gameplay/Exit[/Keyboard/escape,/DualSenseGamepadHID/start]
+      value: ebe16278-3be1-4f52-836c-c0c58af329c3
       objectReference: {fileID: 0}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionName
-      value: Gameplay/Continue[/Keyboard/anyKey]
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
+      value: UI/Continue[/Keyboard/anyKey,/Mouse/backButton,/Mouse/forwardButton,/Mouse/leftButton,/Mouse/middleButton,/Mouse/press,/Mouse/rightButton]
       objectReference: {fileID: 0}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1108,32 +1097,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 793006061}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnExit
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnContinue
       objectReference: {fileID: 0}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MausTemple.GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MausTemple.GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: MausTemple.Gameplay.GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5551194066321537303, guid: 95836bb7e5a8b0a4da772fc7e23b98bb, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

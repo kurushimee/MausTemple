@@ -1,32 +1,36 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using TMPro;
 using System;
+using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-namespace MausTemple
+namespace MausTemple.Gameplay
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _timerText;
-        [SerializeField] private GameObject _continueText;
+        [SerializeField] private TMP_Text timerText;
+        [SerializeField] private GameObject continueText;
+        [SerializeField] private PlayerInput playerInput;
 
-        private float _timer;
         private int _chestsCollected;
+        private InputActionMap _gameplayActionMap;
+        private float _timer;
+        private InputActionMap _uiActionMap;
         private bool _waitingForRestart;
 
         private void Start()
         {
             SceneManager.LoadScene(2, LoadSceneMode.Additive);
 
-            if (!PlayerPrefs.HasKey("HighscoreTime"))
-            {
-                PlayerPrefs.SetFloat("HighscoreTime", 0f);
-            }
-            if (!PlayerPrefs.HasKey("HighscoreText"))
-            {
-                PlayerPrefs.SetString("HighscoreText", "00:00:00");
-            }
+            if (!PlayerPrefs.HasKey("HighscoreTime")) PlayerPrefs.SetFloat("HighscoreTime", 0f);
+
+            if (!PlayerPrefs.HasKey("HighscoreText")) PlayerPrefs.SetString("HighscoreText", "00:00:00");
+
+            _gameplayActionMap = playerInput.actions.FindActionMap("Gameplay");
+            _uiActionMap = playerInput.actions.FindActionMap("UI");
+
+            _gameplayActionMap.Enable();
+            _uiActionMap.Disable();
         }
 
         private void Update()
@@ -35,16 +39,16 @@ namespace MausTemple
 
             _timer += Time.deltaTime;
 
-            int min = (int)_timer / 60;
+            var min = (int)_timer / 60;
             var minf = min > 9 ? $"{min}" : $"0{min}";
 
-            int sec = (int)_timer % 60;
+            var sec = (int)_timer % 60;
             var secf = sec > 9 ? $"{sec}" : $"0{sec}";
 
-            int ms = (int)(Math.Round(_timer, 2) * 100) % 100;
+            var ms = (int)(Math.Round(_timer, 2) * 100) % 100;
             var msf = ms > 9 ? $"{ms}" : $"0{ms}";
 
-            _timerText.text = $"{minf}:{secf}:{msf}";
+            timerText.text = $"{minf}:{secf}:{msf}";
         }
 
         private void EndGame()
@@ -54,22 +58,25 @@ namespace MausTemple
             if (_timer > PlayerPrefs.GetFloat("HighscoreTime"))
             {
                 PlayerPrefs.SetFloat("HighscoreTime", _timer);
-                PlayerPrefs.SetString("HighscoreText", _timerText.text);
+                PlayerPrefs.SetString("HighscoreText", timerText.text);
 
-                _timerText.text += "\nnew highscore!";
+                timerText.text += "\nnew highscore!";
             }
 
-            _continueText.SetActive(true);
+            continueText.SetActive(true);
             _waitingForRestart = true;
+            _gameplayActionMap.Disable();
+            _uiActionMap.Enable();
         }
 
         public void OnCollect()
         {
-            var mouseClicks = 10;
-            if (++_chestsCollected == mouseClicks)
-            {
-                EndGame();
-            }
+#if UNITY_EDITOR
+            const int mouseClicks = 1;
+#else
+            const int mouseClicks = 10;
+#endif
+            if (++_chestsCollected == mouseClicks) EndGame();
         }
 
         public void OnExit(InputAction.CallbackContext context)
@@ -79,11 +86,9 @@ namespace MausTemple
 
         public void OnContinue(InputAction.CallbackContext context)
         {
-            if (_waitingForRestart && context.canceled)
-            {
-                Time.timeScale = 1f;
-                SceneManager.LoadScene(1);
-            }
+            if (!context.canceled) return;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
         }
     }
 }
