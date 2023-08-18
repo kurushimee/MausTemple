@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.ben-w.erp": {
-      "version": "https://github.com/MarshMello0/Editor-Rich-Presence.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "64cc4bf33c243ee831fe6b7d19651bc81a24d1eb"
-    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
