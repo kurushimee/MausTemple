@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="315" height="250" src="https://img.itch.zone/aW1nLzEzMTE1ODM5LnBuZw==/original/JL28zZ.png">
+  <img width="315" height="250" src="https://img.itch.zone/aW1nLzEzMTU3MTU2LnBuZw==/original/vJZwE2.png">
 </p>
 
 <h1 align="center">Maus Temple</h1>
