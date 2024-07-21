@@ -6,7 +6,7 @@
 <h1 align="center">Maus Temple</h1>
 
 <p align="center">
-A simple 2D platformer for PGD Jam 12 by Ivan "iver" Ermakov. Your goal is to collect 10 treasure chests (shaped like yellow boxes) around the level as fast as possible.
+A simple 2D platformer made for PGD JAM #12 by kurushimee. Your goal is to collect 10 treasure chests (shaped like yellow boxes) around the level as fast as possible.
 </p>
 
 ## Table of Contents
