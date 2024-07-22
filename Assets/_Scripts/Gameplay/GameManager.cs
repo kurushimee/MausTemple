@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Handles the game's state and global events.
+/// </summary>
 public class GameManager : MonoBehaviour {
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject continueText;
@@ -46,6 +49,9 @@ public class GameManager : MonoBehaviour {
         timerText.text = $"{minf}:{secf}:{msf}";
     }
 
+    /// <summary>
+    /// Stops the game and updates the high score.
+    /// </summary>
     private void EndGame() {
         Time.timeScale = 0f;
 
@@ -62,6 +68,9 @@ public class GameManager : MonoBehaviour {
         _uiActionMap.Enable();
     }
 
+    /// <summary>
+    /// Increments the number of chests collected and checks if it reached the required number to end the game.
+    /// </summary>
     public void OnCollect() {
 #if UNITY_EDITOR
         const int mouseClicks = 1;
